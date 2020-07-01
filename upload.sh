@@ -1,11 +1,11 @@
 #!/bin/sh
 set -e
 
-if [ -z $S3_ACCESS_SECRET_KEY ]; then
+if [ -z $AWS_SECRET_ACCESS_KEY ]; then
   echo "No SECRET_KEY provided Using system default"
 fi
 
-if [ -z $S3_ACCESS_KEY_ID ]; then
+if [ -z $AWS_ACCESS_KEY_ID ]; then
   echo "No KEY_ID provided Using system default"
 fi
 
