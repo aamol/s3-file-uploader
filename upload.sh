@@ -24,10 +24,10 @@ do
 	if [ -z $USE_SYNC ]
 	then
 	  echo "Coping files to bucket"
-	  aws s3 cp $SOURCE_PATH $BUCKET_PATH
+	  aws s3 cp $SOURCE_PATH $BUCKET_PATH/$HOSTNAME
 	else
 	  echo "Sync files to bucket"
-	  aws s3 sync $SOURCE_PATH $BUCKET_PATH
+	  aws s3 sync $SOURCE_PATH $BUCKET_PATH/$HOSTNAME
 	fi
 	sleep $CRON_INTERVAL
 done
